@@ -34,6 +34,8 @@ Neural networks have emerged as a powerful tool for forecasting the dynamics of 
 The first part of the script generates initial conditions for the Lorenz system, solves the system for those initial conditions, and generates input and output data for the neural network. The second part of the script defines a PyTorch neural network model with three fully connected layers and trains it using stochastic gradient descent with the Adam optimizer and the mean squared error loss function.
 
 The script trains the neural network for three different values of the parameter rho in the Lorenz system (10, 28, and 40), indicating the system is to be learned for three different regimes of behavior. This can be useful for studying the dynamics of the Lorenz system under different conditions
+
+Then, to see how well our NN works for the future state prediction for rho = 17 and rho = 35, we generates 100 random initial conditions for ρ = 17, 35 and integrates the Lorenz system from t=0 to t=4 with a time step of 0.01 for each initial condition. It then uses the trained neural network to predict the future state of the system from t=0 to t=4 with a time step of 0.01. Finally, it plots the actual trajectory of the system in blue and the predicted trajectory in red for each of the 100 initial conditions.
 ## Computational Results
-``
+
 ## Summary and Conclusions
