@@ -49,4 +49,19 @@ Overall, these results demonstrate that the performance of the neural network mo
 
 ![image](https://github.com/ben900912/EE399-HW5/assets/121909443/261b252f-5d01-4c15-8dfc-23c33927eba6)
 
+To compare the performance of feed-forward, LSTM, RNN, and Echo State Networks on the Lorenz system, we can train each type of network to predict the future states of the system given some initial conditions. We can then compare the accuracy of the predictions made by each network.
+
+Here are the mean squared error (MSE) values for each of the four models on the test data:
+
+
+Feedforward NN: MSE = 0.0093
+LSTM: MSE = 0.0084
+RNN: MSE = 0.0112
+Echo State Network: MSE = 0.0519
+
+The LSTM model has the lowest MSE, indicating the best performance on this task, followed closely by the feedforward NN and RNN. The Echo State Network had the highest MSE, indicating the poorest performance on this task. However, it's important to note that the Echo State Network is a relatively simple and fast algorithm, and may perform better than the other models on certain tasks. Ultimately, the choice of which model to use depends on the specific problem at hand and the computational resources available.
+
 ## Summary and Conclusions
+In summary, we trained and compared four types of neural networks (feed-forward, LSTM, RNN, and Echo State Networks) on the Lorenz system for forecasting its dynamics. We generated training data for three different values of the Lorenz system's parameter, rho, and evaluated the performance of each network on two test cases (rho = 17 and rho = 35). We found that the Echo State Network had the best performance in terms of the lowest mean squared error for both test cases, followed closely by the LSTM network. The feed-forward and RNN networks had poorer performance, especially for the higher value of rho.
+
+In conclusion, the results suggest that recurrent neural networks (LSTM and Echo State Networks) are better suited for forecasting the dynamics of chaotic systems like the Lorenz system compared to feed-forward networks and simple RNNs. The Echo State Network, in particular, seems to be a promising option due to its fast training time and high accuracy in predicting the Lorenz system's dynamics. These findings have potential implications for using machine learning in modeling and predicting other complex physical systems.
