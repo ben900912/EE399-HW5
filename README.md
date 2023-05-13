@@ -38,4 +38,15 @@ The script trains the neural network for three different values of the parameter
 Then, to see how well our NN works for the future state prediction for rho = 17 and rho = 35, we generates 100 random initial conditions for ρ = 17, 35 and integrates the Lorenz system from t=0 to t=4 with a time step of 0.01 for each initial condition. It then uses the trained neural network to predict the future state of the system from t=0 to t=4 with a time step of 0.01. Finally, it plots the actual trajectory of the system in blue and the predicted trajectory in red for each of the 100 initial conditions.
 ## Computational Results
 
+The computational results for future state prediction of the Lorenz system for ρ=17 using the trained neural network are as follows
+For rho=17, we can see that the predicted time series initially follows the actual time series quite closely, but as time progresses, there is a growing divergence between the two. This suggests that the neural network model is not able to accurately capture the complex dynamics of the Lorenz system for this value of rho.
+
+For rho=35, we see a much better agreement between the actual and predicted time series. The predicted time series closely follows the actual time series, with only small deviations as time progresses. This suggests that the neural network model is able to accurately capture the dynamics of the Lorenz system for this value of rho.
+
+Overall, these results demonstrate that the performance of the neural network model in predicting future states of the Lorenz system depends on the value of rho. For some values of rho, the model is able to accurately capture the dynamics of the system, while for others it struggles to do so.
+
+![image](https://github.com/ben900912/EE399-HW5/assets/121909443/c2e6f394-4764-4fee-a8f9-ff938bc7e7ec)
+
+![image](https://github.com/ben900912/EE399-HW5/assets/121909443/261b252f-5d01-4c15-8dfc-23c33927eba6)
+
 ## Summary and Conclusions
